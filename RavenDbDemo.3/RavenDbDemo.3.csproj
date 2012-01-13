@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0BFF2428-82DB-4E9B-B00A-95CB0B4E0D83}</ProjectGuid>
+    <ProjectGuid>{8B1365C7-055A-4862-B783-C00C2962FDF5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RavenDbDemo</RootNamespace>

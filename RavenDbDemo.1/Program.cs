@@ -16,32 +16,39 @@ namespace RavenDbDemo
 					var post = new Post
 								{
 									BlogId = "blogs/1",
-									AuthorId = "users/3",
-									Name = "Pasty Geek",
+									AuthorId = "users/PastyGeek",
+									Name = "PastyGeek",
 									PostDate = DateTime.Now.AddHours(-1),
 									Title = "Having a blast at CodeMash!",
 									Body = "Hanselman! Bacon! Swimming! You missed the 20 minute ticket window! Ha ha!",
 									Tags = new List<string> { "bacon", "codemash", "conferences", "gloating" }
 								};
 
-					post.Comments.Add(new Comment
+					session.Store(post);
+					session.SaveChanges();
+
+					Console.WriteLine("Created initial blog post. Press any key...");
+					Console.ReadKey(true);
+
+					var existingPost = session.Load<Post>(post.Id);
+
+					existingPost.Comments.Add(new Comment
 					{
 						CommentDate = DateTime.Now.AddMinutes(-30),
 						Email = "bitter@work.com",
-						Name = "Grumply Slow Guy",
+						Name = "Grumpy Slow Guy",
 						Text = "Thanks for rubbing salt into my wound."
 					});
 
-					post.Comments.Add(new Comment
+					existingPost.Comments.Add(new Comment
 					{
 						CommentDate = DateTime.Now.AddMinutes(-15),
 						Email = "bragger@baconparty.com",
-						Name = "Pasty Geek",
+						Name = "PastyGeek",
 						Text = "LOL!"
 					});
 
-					session.Store(post);
-
+					session.Store(existingPost);
 					session.SaveChanges();
 				}
 			}

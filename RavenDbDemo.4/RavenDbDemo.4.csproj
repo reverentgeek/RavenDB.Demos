@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0BFF2428-82DB-4E9B-B00A-95CB0B4E0D83}</ProjectGuid>
+    <ProjectGuid>{BB1658B0-6204-4B8A-9120-925AE2D3642E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RavenDbDemo</RootNamespace>
@@ -74,7 +74,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RavenDbDemo.Core\RavenDbDemo.Core.csproj">
       <Project>{762EC37E-7162-44E0-8028-2AF48B1DC089}</Project>
-      <Name>RavenDbDemo.Core</Name>
+      <Name>RavenDB.Demo.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
