@@ -27,8 +27,9 @@ namespace RavenDbDemo
 							Tags = new List<string> { "tag" + i, "codemash" }
 						};
 						session.Store(post);
-						session.SaveChanges();
 					}
+
+					session.SaveChanges();
 
 					Console.WriteLine("Query for all posts.");
 		
